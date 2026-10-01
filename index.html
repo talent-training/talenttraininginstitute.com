@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>STM SOFTWARE | Certificate Verification</title>
-
 <style>
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing:border-box; /* ترڅو پډینګ د کارت کچه له ټاکلي اندازې لویه نه کړي */
 }
 
 body{
@@ -19,99 +18,92 @@ body{
 
 .header{
     text-align:center;
-    font-size:42px;
+    font-size:36px;
     font-weight:300;
     color:#555;
-    margin:40px 0 35px;
-}
-.card{
-    width:484px;
-    height:500px;
-    margin:0 auto 40px;
-    background:#fff;
-    padding:50px 35px;
-    border-radius:0;
-    box-shadow:none;
+    margin:30px 0 20px;
 }
 
+.card{
+    width: 484px;        /* ثابت پلنوالی */
+    height: 500px;       /* ثابت لوړوالی */
+    max-width: 95vw;     /* په خورا کوچنیو موبایلونو کې له سکرین څخه نه بهر کیږي */
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 35px 25px;  /* متوازنه داخلې فاصله د ۵۰۰ پکسلو په غېږ کې د متن ځایولو لپاره */
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* متن په دقیق ډول د ۵۰۰px کارت په منځ کې ساتي */
+}
 
 .valid{
     color:#00A651;
-    font-size:32px;
+    font-size:28px;
     font-weight:700;
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:25px;
 }
 
 .title{
-    font-size:20px;
+    font-size:17px;
     font-weight:700;
     color:#555;
     text-align:center;
-    margin-top:30px;
+    margin-top:18px;
 }
 
 .value{
-    font-size:18px;
+    font-size:16px;
     color:#666;
     text-align:center;
-    margin-top:10px;
-    line-height:1.6;
+    margin-top:5px;
+    line-height:1.4;
 }
 
-@media (max-width:768px){
+/* په کوچنیو سکرینونو کې د متن لږ موازنه ساتل */
+@media (max-width:500px){
+    .card{
+        height: 500px; /* لوړوالی ۵۰۰px پاتې کیږي */
+        padding: 25px 15px;
+    }
 
-.header{
-    font-size:30px;
-    margin:28px 0 25px;
-}
+    .valid{
+        font-size:24px;
+        margin-bottom:15px;
+    }
 
-.card{
-    width:84%;
-    max-width:430px;
-    padding:34px 24px;
-}
+    .title{
+        font-size:15px;
+        margin-top:12px;
+    }
 
-.valid{
-    font-size:24px;
-    margin-bottom:30px;
-}
-
-.title{
-    font-size:15px;
-    margin-top:24px;
-}
-
-.value{
-    font-size:14px;
-}
-
+    .value{
+        font-size:14px;
+    }
 }
 </style>
-
 </head>
-
 <body>
 
 <div class="header">STM SOFTWARE</div>
 
 <div class="card">
-
-<div class="valid">Valid Certificate</div>
-
-<div class="title">Certificate Number</div>
-<div class="value">LS-AD-2026-460009</div>
-
-<div class="title">Certificate Validity</div>
-<div class="value">20/07/2029</div>
-
-<div class="title">Attendee Name</div>
-<div class="value">TAJGUL HIJRAN</div>
-
-<div class="title">Course Name</div>
-<div class="value">Lifting Supervisor (As Per ADNOC HSE-PSW-CP19)</div>
-
+    <div class="valid">Valid Certificate</div>
+    
+    <div class="title">Certificate Number</div>
+    <div class="value">LS-AD-2026-460009</div>
+    
+    <div class="title">Certificate Validity</div>
+    <div class="value">20/07/2029</div>
+    
+    <div class="title">Attendee Name</div>
+    <div class="value">TAJGUL HIJRAN</div>
+    
+    <div class="title">Course Name</div>
+    <div class="value">Lifting Supervisor (As Per ADNOC HSE-PSW-CP19)</div>
 </div>
 
 </body>
-                                           </html>
+</html>
